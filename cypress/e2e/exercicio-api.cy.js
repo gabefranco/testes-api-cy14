@@ -62,7 +62,7 @@ describe('Testes da Funcionalidade Usuários', () => {
                 body:
                 {
                     "nome": "FirstName LastName Silva",
-                    "email": "firstnamelast@qadasda.com.br",
+                    "email": faker.internet.email(),
                     "password": "teste123",
                     "administrador": "false"
                 }
