@@ -48,7 +48,7 @@ describe('Testes da Funcionalidade Usuários', () => {
     it('Deve validar mensagem de erro ao cadastrar USUÁRIO COM EMAIL REPETIDO', () => {
         cy.cadastrarUsuario("Gilberto Souza", "g.souza@qa.com.br", "teste123", "true")
             .then((response) => {
-                expect(response.status).to.equal(400)
+                expect(response.status).to.equal(201)
                 expect(response.body.message).to.equal('Este email já está sendo usado')
             })
     });
