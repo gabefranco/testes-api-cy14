@@ -24,7 +24,8 @@
     "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0",
-    "serverest": "^2.26.6"
+    "serverest": "^2.26.6",
+    "start-server-and-test": "^1.14.0"
   },
   "repository": {
     "type": "git",

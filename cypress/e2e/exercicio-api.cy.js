@@ -45,7 +45,7 @@ describe('Testes da Funcionalidade Usuários', () => {
         })
     });
 
-    it.only('Deve validar mensagem de erro ao cadastrar USUÁRIO COM EMAIL REPETIDO', () => {
+    it('Deve validar mensagem de erro ao cadastrar USUÁRIO COM EMAIL REPETIDO', () => {
         cy.cadastrarUsuario("Gilberto Souza", "g.souza@qa.com.br", "teste123", "true")
             .then((response) => {
                 expect(response.status).to.equal(400)
@@ -55,7 +55,7 @@ describe('Testes da Funcionalidade Usuários', () => {
 
     it('Deve editar um USUÁRIO já cadastrado', () => {
         cy.request('usuarios').then(response => {
-            let id = response.body.usuarios[4]._id
+            let id = response.body.usuarios[3]._id
             cy.request({
                 method: 'PUT',
                 url: `usuarios/${id}`,
