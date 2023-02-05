@@ -13,6 +13,7 @@ pipeline {
                 sh 'NO_COLOR=1 npm run cy:run-ci | true' 
                 sh 'npm run cy:report'
             }
+            
         }
         stage('Parte 3 - Geração do Relatório em HTML') {
             steps {
