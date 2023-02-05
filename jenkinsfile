@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Parte 1 - Instação das Dependências no Cypress') {
+            steps {
+                git branch: 'aula-ci', url: 'https://github.com/gabefranco/testes-api-cy14.git'
+                sh 'npm install' 
+            }
+        }
+        stage('Parte 2 - Execução do Teste') {
+            steps {
+                sh 'NO_COLOR=1 npm run cy:run-ci | true' 
+                sh 'npm run cy:report'
+            }
+        }
+        stage('Parte 3 - Geração do Relatório em HTML') {
+            steps {
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'mochawesome-report', reportFiles: 'report.html', reportName: 'Rel-NOVO Teste Ebac', reportTitles: '', useWrapperFileDirectly: true])
+                }
+        }
+    }
+}
