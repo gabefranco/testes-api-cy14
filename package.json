@@ -14,18 +14,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.4.1"
+    "cypress": "^12.5.1"
   },
   "dependencies": {
-    "cypress-multi-reporters": "^1.5.0",
+    "cypress-multi-reporters": "^1.6.2",
     "faker-br": "^0.4.1",
     "joi": "^17.7.0",
-    "mocha": "^9.1.0",
-    "mochawesome": "^6.2.2",
-    "mochawesome-merge": "^4.2.0",
+    "mocha": "^9.2.2",
+    "mochawesome": "^6.3.1",
+    "mochawesome-merge": "^4.2.2",
     "mochawesome-report-generator": "^5.2.0",
     "serverest": "^2.26.6",
-    "start-server-and-test": "^1.14.0"
+    "start-server-and-test": "^1.15.3"
   },
   "repository": {
     "type": "git",
