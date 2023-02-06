@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Parte 2 - Execução do Teste') {
             steps {
-                sh 'NO_COLOR=1 npm run cy:run-ci | true' 
+                sh 'NO_COLOR=1 npm run cy:run-ci | true'
                 sh 'npm run cy:report'
             }
             
